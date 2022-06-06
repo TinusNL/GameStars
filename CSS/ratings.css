@@ -1,0 +1,263 @@
+section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+#search_article {
+    margin-right: 20px;
+
+    width: 300px;
+    height: 500px;
+}
+
+form {
+    width: 100%;
+
+    padding: 0px;
+}
+
+#searchbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+
+    background-color: rgb(207, 207, 207);
+}
+
+#searchbox input[type="text"] {
+    position: relative;
+    left: 0px;
+
+    width: calc(100% - 40px - 30px);
+    height: 100%;
+
+    padding: 0px;
+    margin: 0px;
+
+    padding-left: 20px;
+    padding-right: 10px;
+
+    border: none;
+    outline: none;
+
+    font-size: 15px;
+
+    background-color: rgb(207, 207, 207);
+}
+
+#searchbox div {
+    height: 40px;
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchbox div input {
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+
+    border: 0px;
+    outline: 0px;
+
+    background-color: rgb(207, 207, 207);
+
+    cursor: pointer;
+
+    background-image: url(../Media/SearchIcon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#platform {
+    margin-top: 40px;
+
+    width: 100%;
+    height: 400px;
+}
+
+#platform_title {
+    width: 100%;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+
+    font-size: 20px;
+
+    background-color: rgb(0, 221, 221);
+}
+
+#platform_options {
+    margin-top: 10px;
+
+    display: grid;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+    grid-template-rows: repeat(10, 40px);
+    grid-gap: 10px;
+
+    width: 100%;
+    height: calc(100% - 40px);
+}
+
+#platform_options a, #platform_options a:active, #platform_options a:visited {
+    transition: 0.25s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: rgb(207, 207, 207);
+    text-decoration: none;
+
+    color: rgb(22, 22, 22);
+}
+
+#platform_options a:hover {
+    transition: 0.25s;
+
+    background-color: rgb(0, 221, 221);
+    text-decoration: underline;
+}
+
+#result_article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    flex-direction: column;
+
+    margin-left: 20px;
+    margin-bottom: 40px;
+
+    width: 500px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.result_box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    width: 100%;
+    height: 125px;
+
+    cursor: pointer;
+}
+
+.result_box img {
+    height: 100%;
+}
+
+.result_box > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 278px;
+    height: 100%;
+
+    background-color: rgb(58, 58, 58);
+}
+
+.result_box > div h2 {
+    height: calc((125px / 8) * 5);
+
+    margin: 0px;
+    padding: 0px;
+
+    text-align: center;
+    line-height: calc(125px / 4);
+
+    color: rgb(255, 255, 255);
+}
+
+.stars {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+
+    width: 278px;
+    height: calc(125px / 4);
+}
+
+.stars img {
+    height: 20px;
+
+    margin: 2.5px;
+}
+
+.noresult {
+    height: 75px;
+
+    background-color: rgb(58, 58, 58);
+}
+
+.noresult h2 {
+    text-align: center;
+
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 890px) and (min-width: 560px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search_article {
+        margin: 0px;
+
+        width: 500px;
+    }
+
+    #result_article {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #search_article {
+        margin: 0px;
+
+        width: 350px;
+    }
+
+    #result_article {
+        margin: 0px;
+
+        width: 350px;
+    }
+
+    .result_box {
+        height: 100px;
+    }
+
+    .result_box div {
+        width: 175px;
+    }
+
+    .result_box div h2 {
+        padding: 5px;
+        font-size: 20px;
+    }
+}

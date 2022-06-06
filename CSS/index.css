@@ -1,0 +1,244 @@
+section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.labels {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.labels div {
+    position: relative;
+    width: fit-content;
+    padding: 7.5px;
+
+    font-size: 12px;
+
+    background-color: rgb(0, 221, 221);
+}
+
+.infolabel {
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.gamelabel {
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+.thumb_article {
+    margin-right: 20px;
+
+    width: 600px;
+    height: 340px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
+}
+
+.thumb_article .title {
+    position: relative;
+    top: 306px;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(58, 58, 58);
+
+    text-align: center;
+    line-height: 50px;
+
+    font-weight: bold;
+    font-size: 22px;
+
+    color: rgb(255, 255, 255);
+}
+
+#news_article {
+    margin-left: 20px;
+
+    width: 200px;
+    height: 390px;
+}
+
+#news_title {
+    width: 100%;
+    height: 35px;
+
+    text-align: center;
+    line-height: 35px;
+
+    font-size: 20px;
+
+    background-color: rgb(0, 221, 221);
+}
+
+.news_item {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 2px solid rgb(148, 148, 148);
+}
+
+.news_item a, .news_item a:visited, .news_item a:active {
+    transition: 0.25s;
+
+    width: 100%;
+    height: 100%;
+
+    color: rgb(22, 22, 22);
+
+    text-align: center;
+    line-height: 40px;
+
+    font-weight: bolder;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.news_item a:hover {
+    transition: 0.25s;
+
+    color: rgb(148, 148, 148);
+}
+
+#row_title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.thumb_article_s {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    width: 253px;
+    height: 140px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
+}
+
+.thumb_article_s .title {
+    position: relative;
+    top: 105px;
+
+    width: 100%;
+    height: 50px;
+
+    background-color: rgb(58, 58, 58);
+
+    text-align: center;
+    line-height: 50px;
+
+    font-weight: bold;
+    font-size: 12px;
+
+    color: rgb(255, 255, 255);
+}
+
+#toplist {
+    margin: 0px;
+
+    margin-bottom: 90px;
+}
+
+#game1 { 
+    background-image: url(../Media/Games/ForzaHorizon5.png);
+
+    animation: ThumbSlide 15s linear infinite;
+}
+
+@keyframes ThumbSlide {
+    from {
+        background: url(../Media/Games/ForzaHorizon5.png);
+        background-size: cover;
+    }
+    10%, 30% {
+        background: url(../Media/Games/Forza5/Thumb1.png);
+        background-size: cover;
+    }
+    40%, 60% {
+        background: url(../Media/Games/Forza5/Thumb2.png);
+        background-size: cover;
+    }
+    70%, 90% {
+        background: url(../Media/Games/Forza5/Thumb3.png);
+        background-size: cover;
+    }
+    to {
+        background: url(../Media/Games/ForzaHorizon5.png);
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 845px) and (min-width: 665px) {
+    #news_article {
+        display: none;
+    }
+
+    #game1 {
+        margin: 0px;
+    }
+
+    #row_title {
+        margin-top: 50px;
+    }
+
+    #toplist {
+        align-items: center;
+
+        flex-direction: column;
+    }
+
+    .thumb_article_s {
+        margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    #news_article {
+        display: none;
+    }
+
+    #game1 {
+        margin: 0px;
+
+        width: 300px;
+        height: 170px;
+    }
+
+    #game1 .title {
+        top: 136px;
+
+        font-size: 15px;
+    }
+
+    #row_title {
+        margin-top: 50px;
+    }
+
+    #toplist {
+        align-items: center;
+
+        flex-direction: column;
+    }
+
+    .thumb_article_s {
+        margin-bottom: 90px;
+    }
+}
